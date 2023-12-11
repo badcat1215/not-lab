@@ -22,3 +22,10 @@ docker run -d -p 9003:80 --name enum-lab --restart always my-php-enum-lab
 cd "$CURRENT_DIR/drupal" || exit
 docker run --name drupal -d -p 9004:80 --restart always vulhub/drupal:8.5.0
 docker cp ./ drupal:/var/www/html
+
+# 第四個Lab架設
+cd "$CURRENT_DIR/jupyter" || exit
+docker compose up -d
+
+# 回傳完成
+echo "Done!"

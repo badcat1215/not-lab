@@ -11,6 +11,8 @@
 </br>
 <p>Parameter is file</p>
 </br>
+<p>flag format: flag{password}</p>
+</br>
 
 <!-- Lorem Ipsum -->
 <p>

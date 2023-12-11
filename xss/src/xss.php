@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>XSS Example</title>
+    <title>XSS Lab</title>
+    <style>
+        h1 {
+            background-color: lightblue;
+            display: inline;
+        }
+    </style>
 </head>
 <body>
+    <h1>XSS Lab</h1>
 
-<h1>XSS Example</h1>
+<?php
 
-<!-- 用户输入作为 HTML 直接输出到页面 -->
-<p>Welcome, <?php echo $_GET['username']; ?>!</p>
+$DATA = $_GET['data'];
+echo "</br>";
+echo 'Parameter is data';
+echo "</br>";
+echo "</br>";
 
-<!-- 漏洞点：使用用户输入作为 JavaScript 输出到页面 -->
-<script>
-    var userInput = "<?php echo $_GET['input']; ?>";
-    document.write("<p>User input: " + userInput + "</p>");
-</script>
+if (preg_match('/<[a-zA-z]/', $DATA )) {
+	echo 'Your input is not allowed';
+} else {
+	echo 'Hello You';
+	echo '</br>';
+	echo '<a href="'. $DATA .'?PageIndex=1&Search=" style="width: 150px; position: relative;">JUST A LINK</a>';
+}
+
+?>
 
 </body>
 </html>

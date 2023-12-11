@@ -25,7 +25,7 @@ docker cp ./ drupal:/var/www/html
 
 # 第五個Lab架設
 cd "$CURRENT_DIR/jupyter" || exit
-docker compose up -d
+docker-compose up -d
 
 # 回傳完成
 echo "Done!"

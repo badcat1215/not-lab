@@ -1,7 +1,10 @@
 version: '2'
 services:
- web:
-   image: vulhub/jupyter-notebook:5.2.2
-   command: start-notebook.sh --NotebookApp.token=''
-   ports:
-    - "8888:8888"
+  web:
+    image: vulhub/jupyter-notebook:5.2.2
+    command: start-notebook.sh --NotebookApp.token=''
+    ports:
+      - "9005:8888" 
+
+    environment:  # 新增環境變數
+      - missallsunday=flag{nico3ob1n}

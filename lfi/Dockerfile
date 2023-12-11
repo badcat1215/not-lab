@@ -3,5 +3,5 @@ COPY src/ /var/www/html/
 
 RUN groupadd -g 9999 Mr0 \
     && useradd -r -u 9999 -g Mr0 -ms /bin/bash Mr0
-RUN echo 'Mr0:Captain1' | chpasswd
+RUN echo 'Mr0:Captain' | chpasswd
 RUN chmod a+r /etc/shadow

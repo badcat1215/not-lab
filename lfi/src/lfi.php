@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LFI Example</title>
+    <title>LFI Lab</title>
 </head>
 <body>
 
-<h1>LFI Example</h1>
+<h1>LFI Lab</h1>
 </br>
 <p>Local File Inclusion Lab</p>
 </br>
@@ -14,11 +14,11 @@
 
 <!-- Lorem Ipsum -->
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend justo id urna blandit, nec vulputate nulla laoreet. Donec ut purus sit amet elit auctor luctus. Nulla facilisi. Vivamus consequat vestibulum dui, eget feugiat velit accumsan id. Sed congue, ante eget vestibulum commodo, urna turpis tincidunt libero, eu rhoncus metus ligula nec eros.
+	組織成員清單(member.txt)：
 </p>
 
 <?php
-$default_file = 'hello.txt';
+$default_file = 'member.txt';
 
 // 檢查輸入
 function sanitizeInput($input) {
